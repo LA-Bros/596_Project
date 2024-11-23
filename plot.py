@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import imageio.v2 as imageio
+import os
+
+# Ensure the output directory exists
+os.makedirs("Image", exist_ok=True)
 
 
 # Define the Rastrigin function
@@ -27,9 +31,6 @@ with open(filename, 'r') as file:
     if current_iter:
         points.append(current_iter)
 
-# Keep only the first 3 iterations for visualization
-# points = points[:3]
-
 # Convert points to NumPy arrays for easier handling
 points = [np.array(p) for p in points]
 
@@ -47,8 +48,14 @@ for i, iteration_points in enumerate(points):
     fig = plt.figure(figsize=(10, 7))
     ax = fig.add_subplot(111, projection='3d')
     ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.3)  # Make the function less prominent
-    ax.scatter(iteration_points[:, 0], iteration_points[:, 1], iteration_points[:, 2],
-               c='red', s=100, marker='o', label=f"Iteration {i}")  # Use circular markers for points
+
+    # Ensure iteration_points has the correct shape
+    if iteration_points.shape[1] == 3:  # Should be (n_points, 3)
+        ax.scatter(iteration_points[:, 0], iteration_points[:, 1], iteration_points[:, 2],
+                   c='red', s=50, marker='o', label=f"Iteration {i}")  # Use circular markers for points
+    else:
+        print(f"Warning: Skipping iteration {i} due to mismatched data dimensions.")
+
     ax.set_xlabel('X1')
     ax.set_ylabel('X2')
     ax.set_zlabel('Rastrigin Value')
@@ -64,3 +71,5 @@ for i, iteration_points in enumerate(points):
 # Save the updated frames as a GIF
 gif_path = "Image/PSO_Rastrigin_Iterations_Final.gif"
 imageio.mimsave(gif_path, frames, duration=1.0)
+
+print(f"GIF saved successfully to {gif_path}")

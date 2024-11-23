@@ -70,6 +70,6 @@ for i, iteration_points in enumerate(points):
 
 # Save the updated frames as a GIF
 gif_path = "Image/PSO_Rastrigin_Iterations_Final.gif"
-imageio.mimsave(gif_path, frames, duration=1.0)
+imageio.mimsave(gif_path, frames, duration=1.0, loop=0)
 
 print(f"GIF saved successfully to {gif_path}")

@@ -1,5 +1,5 @@
 # Target Function
-rastrigin function
+rastrigin function\
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Function.jpg?raw=true)
 
 
@@ -21,4 +21,5 @@ Parallel computing iterative process
         }
 ```
 # Visualization
-Show position of points in each iteration
+Show position of points in each iteration\
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Rastrigin_Iterations_Final.gif?raw=true)

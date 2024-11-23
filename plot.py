@@ -1,22 +1,66 @@
+import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import imageio.v2 as imageio
 
-# Read data
+
+# Define the Rastrigin function
+def rastrigin(X, Y):
+    return 10 * 2 + (X ** 2 - 10 * np.cos(2 * np.pi * X)) + (Y ** 2 - 10 * np.cos(2 * np.pi * Y))
+
+
+# Reload data from the truncated file
+filename = "pso_rastrigin_points.txt"
+iterations = []
 points = []
-with open("pso_rastrigin_points.txt", "r") as file:
+
+with open(filename, 'r') as file:
+    current_iter = []
     for line in file:
-        if "Iteration" not in line:
-            points.append(list(map(float, line.strip().split())))
+        if "Iteration" in line:
+            if current_iter:
+                points.append(current_iter)
+                current_iter = []
+            iterations.append(line.strip())
+        else:
+            current_iter.append(list(map(float, line.strip().split())))
+    if current_iter:
+        points.append(current_iter)
 
-# Convert to arrays
-points = list(zip(*points))
-x, y, z = points[0], points[1], points[2]
+# Keep only the first 3 iterations for visualization
+# points = points[:3]
 
-# Plot
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.scatter(x, y, z, c=z, cmap='viridis')
-ax.set_xlabel("x1")
-ax.set_ylabel("x2")
-ax.set_zlabel("Rastrigin Value")
-plt.show()
+# Convert points to NumPy arrays for easier handling
+points = [np.array(p) for p in points]
+
+# Create the grid for the Rastrigin function
+x = np.linspace(-5.12, 5.12, 100)
+y = np.linspace(-5.12, 5.12, 100)
+X, Y = np.meshgrid(x, y)
+Z = rastrigin(X, Y)
+
+# Create a list to store frames for the GIF
+frames = []
+
+# Plot each iteration and save as a frame
+for i, iteration_points in enumerate(points):
+    fig = plt.figure(figsize=(10, 7))
+    ax = fig.add_subplot(111, projection='3d')
+    ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.3)  # Make the function less prominent
+    ax.scatter(iteration_points[:, 0], iteration_points[:, 1], iteration_points[:, 2],
+               c='red', s=100, marker='o', label=f"Iteration {i}")  # Use circular markers for points
+    ax.set_xlabel('X1')
+    ax.set_ylabel('X2')
+    ax.set_zlabel('Rastrigin Value')
+    ax.set_title(f'PSO on Rastrigin Function - Iteration {i}')
+    plt.legend()
+
+    # Save frame to buffer
+    frame_path = f"Image/frame_{i}.png"
+    plt.savefig(frame_path)
+    frames.append(imageio.imread(frame_path))
+    plt.close()
+
+# Save the updated frames as a GIF
+gif_path = "Image/PSO_Rastrigin_Iterations_Final.gif"
+imageio.mimsave(gif_path, frames, duration=1.0)

@@ -20,3 +20,5 @@ Parallel computing iterative process
             fitness[i] = rastrigin_function(population[i], DIM);
         }
 ```
+# Visualization
+Show position of points in each iteration

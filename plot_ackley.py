@@ -12,7 +12,7 @@ def ackley(X, Y):
 
 
 # Load data from the PSO output file
-filename = "pso_ackley_points.txt"
+filename = "de_ackley_points.txt"
 iterations = []
 points = []
 
@@ -28,7 +28,7 @@ with open(filename, 'r') as file:
             current_iter.append(list(map(float, line.strip().split())))
     if current_iter:
         points.append(current_iter)
-
+points = points[:30]
 # Convert points to NumPy arrays for easier handling
 points = [np.array(p) for p in points]
 
@@ -51,7 +51,7 @@ for i, iteration_points in enumerate(points):
     ax.set_xlabel('X1')
     ax.set_ylabel('X2')
     ax.set_zlabel('Ackley Value')
-    ax.set_title(f'PSO on Ackley Function - Iteration {i}')
+    ax.set_title(f'DE on Ackley Function - Iteration {i}')
     plt.legend()
 
     # Save frame to buffer
@@ -61,7 +61,7 @@ for i, iteration_points in enumerate(points):
     plt.close()
 
 # Save the frames as a GIF
-gif_path = "Image/PSO_Ackley.gif"
-imageio.mimsave(gif_path, frames, duration=1.0, loop=0)
+gif_path = "Image/DE_Ackley.gif"
+imageio.mimsave(gif_path, frames,fps=8, loop=0)
 
 print(f"GIF saved as {gif_path}")

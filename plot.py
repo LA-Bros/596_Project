@@ -10,7 +10,7 @@ os.makedirs("Image", exist_ok=True)
 
 # Define the Rastrigin function
 def rastrigin(X, Y):
-    return 10 * 2 + (X ** 2 - 10 * np.cos(2 * np.pi * X)) + (Y ** 2 - 10 * np.cos(2 * np.pi * Y))
+    return 5 * 2 + (X ** 2 - 5 * np.cos(2 * np.pi * X)) + (Y ** 2 - 5 * np.cos(2 * np.pi * Y))
 
 
 # Reload data from the truncated file

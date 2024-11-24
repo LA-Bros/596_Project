@@ -1,6 +1,6 @@
 # Target Function
 Ackley function\
-![](https://github.com/LA-Bros/596_Project/blob/main/Image/Function.jpg?raw=true)
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/Ackley.jpg?raw=true)
 
 
 # Algorithms

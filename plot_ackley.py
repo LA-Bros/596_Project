@@ -12,7 +12,7 @@ def ackley(X, Y):
 
 
 # Load data from the PSO output file
-filename = "ga_ackley_points.txt"
+filename = "gwo_ackley_points.txt"
 iterations = []
 points = []
 
@@ -51,7 +51,7 @@ for i, iteration_points in enumerate(points):
     ax.set_xlabel('X1')
     ax.set_ylabel('X2')
     ax.set_zlabel('Ackley Value')
-    ax.set_title(f'GA on Ackley Function - Iteration {i}')
+    ax.set_title(f'GWO on Ackley Function - Iteration {i}')
     plt.legend()
 
     # Save frame to buffer
@@ -61,7 +61,7 @@ for i, iteration_points in enumerate(points):
     plt.close()
 
 # Save the frames as a GIF
-gif_path = "Image/GA_Ackley.gif"
+gif_path = "Image/GWO_Ackley.gif"
 imageio.mimsave(gif_path, frames,fps=8, loop=0)
 
 print(f"GIF saved as {gif_path}")

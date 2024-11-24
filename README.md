@@ -1,13 +1,13 @@
 # Target Function
-rastrigin function\
+Ackley function\
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Function.jpg?raw=true)
 
 
 # Algorithms
 Genetic Algorithm (GA)\
-(GWO)\
-(DE)\
-(SA)
+Grey Wolf Optimization (GWO)\
+Differential Evolution (DE)\
+Particle Swarm Optimization (PSO)
 
 # OpenMP
 Parallel computing iterative process
@@ -22,4 +22,17 @@ Parallel computing iterative process
 ```
 # Visualization
 Show position of points in each iteration\
-![](https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Rastrigin_Iterations_Final.gif?raw=true)
+
+PSO\
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true)
+
+GA\
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true)
+
+DE\
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true)
+
+GWO\
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true)
+
+

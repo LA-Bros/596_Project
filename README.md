@@ -78,6 +78,7 @@ Particle Swarm Optimization (PSO) is inspired by the social behavior of birds fl
 ```c
 #pragma omp parallel for
 for (int i = 0; i < POPULATION_SIZE; i++) {
+    #pragma omp parallel for
     for (int d = 0; d < DIMENSIONS; d++) {
         double A1 = 2 * a * rand() / RAND_MAX - a;
         double C1 = 2 * rand() / RAND_MAX;

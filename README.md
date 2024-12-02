@@ -69,32 +69,24 @@ for (int i = 0; i < POPULATION_SIZE; i += 2) {
 ```
 # Visualization
 Show position of points in each iteration
-<table>
-  <tr>
-    <td>
-      <video autoplay loop muted playsinline width="300">
-        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.mp4" type="video/mp4">
-      </video>
-    </td>
-    <td>
-      <video autoplay loop muted playsinline width="300">
-        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.mp4" type="video/mp4">
-      </video>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <video autoplay loop muted playsinline width="300">
-        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.mp4" type="video/mp4">
-      </video>
-    </td>
-    <td>
-      <video autoplay loop muted playsinline width="300">
-        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.mp4" type="video/mp4">
-      </video>
-    </td>
-  </tr>
-</table>
+
+<p align="center">
+  <img id="gif1" src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" width="300">
+  <img id="gif2" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" width="300">
+</p>
+<p align="center">
+  <img id="gif3" src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" width="300">
+  <img id="gif4" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" width="300">
+</p>
+<script>
+  function restartGIFs() {
+    document.querySelectorAll('img').forEach(img => {
+      img.src = img.src.split('?')[0] + '?t=' + new Date().getTime();
+    });
+  }
+  window.onload = restartGIFs;
+</script>
+
 
 
 

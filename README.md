@@ -25,14 +25,14 @@ The Ackley function in three dimensions is typically visualized as a smooth surf
 
 
 # Algorithms
-### Genetic Algorithm (GA)
-Genetic Algorithm (GA) is inspired by the process of natural selection, mimicking biological evolution. It involves populations of candidate solutions that evolve through selection, crossover, and mutation to find optimal solutions.
-### Grey Wolf Optimization (GWO)
-Grey Wolf Optimization (GWO) is a nature-inspired algorithm based on the social hierarchy and hunting behavior of grey wolves. The wolves form a pack led by the alpha, beta, and delta wolves, with the remaining wolves acting as followers (omega).
-### Differential Evolution (DE)
-Differential Evolution (DE) is a population-based optimization algorithm that relies on the differences between randomly selected individuals to generate new candidate solutions.
 ### Particle Swarm Optimization (PSO)
 Particle Swarm Optimization (PSO) is inspired by the social behavior of birds flocking or fish schooling. Each particle represents a potential solution and moves through the search space based on its own experience and the experience of its neighbors.
+### Genetic Algorithm (GA)
+Genetic Algorithm (GA) is inspired by the process of natural selection, mimicking biological evolution. It involves populations of candidate solutions that evolve through selection, crossover, and mutation to find optimal solutions.
+### Differential Evolution (DE)
+Differential Evolution (DE) is a population-based optimization algorithm that relies on the differences between randomly selected individuals to generate new candidate solutions.
+### Grey Wolf Optimization (GWO)
+Grey Wolf Optimization (GWO) is a nature-inspired algorithm based on the social hierarchy and hunting behavior of grey wolves. The wolves form a pack led by the alpha, beta, and delta wolves, with the remaining wolves acting as followers (omega).
 
 # OpenMP
 ## 1. Particle Swarm Optimization (PSO)

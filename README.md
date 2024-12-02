@@ -94,37 +94,9 @@ for (int i = 0; i < POPULATION_SIZE; i += 2) {
 ```
 # Visualization
 Show position of points in each iteration
-
-<p align="center">
-  <img id="gif1" src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" width="300">
-  <img id="gif2" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" width="300">
-</p>
-<p align="center">
-  <img id="gif3" src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" width="300">
-  <img id="gif4" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" width="300">
-</p>
-<script>
-  function restartGIFs() {
-    document.querySelectorAll('img').forEach(img => {
-      img.src = img.src.split('?')[0] + '?t=' + new Date().getTime();
-    });
-  }
-  window.onload = restartGIFs;
-</script>
+![](https://github.com/LA-Bros/596_Project/blob/main/Image/Combined_Ackley.gif?raw=true)
 
 
-
-
-<table>
-  <tr>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" alt="PSO" width="420"></td>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" alt="GA" width="420"></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" alt="DE" width="420"></td>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" alt="GWO" width="420"></td>
-  </tr>
-</table>
 
 PSO\
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true)

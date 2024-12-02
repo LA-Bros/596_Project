@@ -75,7 +75,7 @@ Particle Swarm Optimization (PSO) is inspired by the social behavior of birds fl
 
 
 ## Example
-```python
+```c
 #pragma omp parallel for
 for (int i = 0; i < POPULATION_SIZE; i += 2) {
     // Select parents
@@ -98,7 +98,23 @@ Show position of points in each iteration
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Combined_Ackley.gif?raw=true)
 
 
+# Usage
+Compile and run these scripts on the machine supporting openmp
+```
+gcc -o pso_ackley pso_ackley.c -fopenmp -lm
+./pso_ackley
+gcc -o ga_ackley ga_ackley.c -fopenmp -lm
+./ga_ackley
+gcc -o de_ackley de_ackley.c -fopenmp -lm
+./de_ackley
+gcc -o gwo_ackley gwo_ackley.c -fopenmp -lm
+./gwo_ackley
+```
+Run the `plot_ackley.py` script to visualize the optimization process.
 
+```bash
+python plot_ackley.py
 
+```
 
 

@@ -13,7 +13,7 @@ def ackley(X, Y):
 
 
 # Load data from the PSO output file
-filename = "gwo_ackley_points.txt"
+filename = "Function/GWO/gwo_ackley_points.txt"
 iterations = []
 points = []
 

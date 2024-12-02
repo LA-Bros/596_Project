@@ -1,13 +1,28 @@
-# Target Function
-Ackley function\
+# Project Description
+Our project focuses on selecting a benchmark function and visualizing the optimization process of four algorithms on this function. Additionally, we aim to leverage OpenMP to parallelize the computation and enhance the iteration efficiency of these algorithms. After careful consideration, we chose the Ackley function as the benchmark function, and the four optimization algorithms are [Genetic Algorithm (GA)](https://en.wikipedia.org/wiki/Genetic_algorithm), [Grey Wolf Optimizer (GWO)](https://en.wikiversity.org/wiki/Algorithm_models/Grey_Wolf_Optimizer), [Differential Evolution (DE)](https://en.wikipedia.org/wiki/Differential_evolution), and [Particle Swarm Optimization (PSO)](https://en.wikipedia.org/wiki/Particle_swarm_optimization).
+
+
+
+# Benchmark Function
+## Ackley function
+### $$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$
+
+
+
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Ackley.jpg?raw=true)
 
 
+
+
 # Algorithms
-Genetic Algorithm (GA)\
-Grey Wolf Optimization (GWO)\
-Differential Evolution (DE)\
-Particle Swarm Optimization (PSO)
+### Genetic Algorithm (GA)
+Genetic Algorithm (GA) is inspired by the process of natural selection, mimicking biological evolution. It involves populations of candidate solutions that evolve through selection, crossover, and mutation to find optimal solutions.
+### Grey Wolf Optimization (GWO)
+Grey Wolf Optimization (GWO) is a nature-inspired algorithm based on the social hierarchy and hunting behavior of grey wolves. The wolves form a pack led by the alpha, beta, and delta wolves, with the remaining wolves acting as followers (omega).
+### Differential Evolution (DE)
+Differential Evolution (DE) is a population-based optimization algorithm that relies on the differences between randomly selected individuals to generate new candidate solutions.
+### Particle Swarm Optimization (PSO)
+Particle Swarm Optimization (PSO) is inspired by the social behavior of birds flocking or fish schooling. Each particle represents a potential solution and moves through the search space based on its own experience and the experience of its neighbors.
 
 # OpenMP
 ## 1. Genetic Algorithm (GA)
@@ -68,7 +83,38 @@ for (int i = 0; i < POPULATION_SIZE; i += 2) {
 }
 ```
 # Visualization
-Show position of points in each iteration\
+Show position of points in each iteration
+
+<p align="center">
+  <img id="gif1" src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" width="300">
+  <img id="gif2" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" width="300">
+</p>
+<p align="center">
+  <img id="gif3" src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" width="300">
+  <img id="gif4" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" width="300">
+</p>
+<script>
+  function restartGIFs() {
+    document.querySelectorAll('img').forEach(img => {
+      img.src = img.src.split('?')[0] + '?t=' + new Date().getTime();
+    });
+  }
+  window.onload = restartGIFs;
+</script>
+
+
+
+
+<table>
+  <tr>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" alt="PSO" width="420"></td>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" alt="GA" width="420"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" alt="DE" width="420"></td>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" alt="GWO" width="420"></td>
+  </tr>
+</table>
 
 PSO\
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true)
@@ -83,15 +129,6 @@ GWO\
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true)
 
 
-<table>
-  <tr>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" alt="PSO" width="400"></td>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" alt="GA" width="400"></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" alt="DE" width="400"></td>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" alt="GWO" width="400"></td>
-  </tr>
-</table>
+
 
 

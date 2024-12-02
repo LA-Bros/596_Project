@@ -69,6 +69,35 @@ for (int i = 0; i < POPULATION_SIZE; i += 2) {
 ```
 # Visualization
 Show position of points in each iteration
+<table>
+  <tr>
+    <td>
+      <video autoplay loop muted playsinline width="300">
+        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video autoplay loop muted playsinline width="300">
+        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <video autoplay loop muted playsinline width="300">
+        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video autoplay loop muted playsinline width="300">
+        <source src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+</table>
+
+
+
 
 <table>
   <tr>

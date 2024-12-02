@@ -77,20 +77,25 @@ Particle Swarm Optimization (PSO) is inspired by the social behavior of birds fl
 ## Example
 ```c
 #pragma omp parallel for
-for (int i = 0; i < POPULATION_SIZE; i += 2) {
-    // Select parents
-    int p1 = tournament_selection(fitness);
-    int p2 = tournament_selection(fitness);
+for (int i = 0; i < POPULATION_SIZE; i++) {
+    for (int d = 0; d < DIMENSIONS; d++) {
+        double A1 = 2 * a * rand() / RAND_MAX - a;
+        double C1 = 2 * rand() / RAND_MAX;
+        double D_alpha = fabs(C1 * alpha_position[d] - positions[i][d]);
+        double X1 = alpha_position[d] - A1 * D_alpha;
 
-    // Crossover and mutation
-    double child1[DIMENSIONS], child2[DIMENSIONS];
-    crossover(population[p1], population[p2], child1, child2);
-    mutate(child1);
-    mutate(child2);
+        double A2 = 2 * a * rand() / RAND_MAX - a;
+        double C2 = 2 * rand() / RAND_MAX;
+        double D_beta = fabs(C2 * beta_position[d] - positions[i][d]);
+        double X2 = beta_position[d] - A2 * D_beta;
 
-    // Evaluate fitness
-    new_fitness[i] = ackley(child1);
-    new_fitness[i + 1] = ackley(child2);
+        double A3 = 2 * a * rand() / RAND_MAX - a;
+        double C3 = 2 * rand() / RAND_MAX;
+        double D_delta = fabs(C3 * delta_position[d] - positions[i][d]);
+        double X3 = delta_position[d] - A3 * D_delta;
+
+        new_positions[i][d] = (X1 + X2 + X3) / 3.0;
+    }
 }
 ```
 # Visualization

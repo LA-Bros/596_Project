@@ -1,9 +1,13 @@
 # Benchmark Function
 Ackley function\
+
+$$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$\
+
+
+
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Ackley.jpg?raw=true)
 
 
-$$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$
 
 
 # Algorithms

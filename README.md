@@ -85,12 +85,12 @@ GWO\
 
 <table>
   <tr>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" alt="PSO" width="500"></td>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" alt="GA" width="500"></td>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true" alt="PSO" width="400"></td>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true" alt="GA" width="400"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" alt="DE" width="500"></td>
-    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" alt="GWO" width="500"></td>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" alt="DE" width="400"></td>
+    <td><img src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" alt="GWO" width="400"></td>
   </tr>
 </table>
 

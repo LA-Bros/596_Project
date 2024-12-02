@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import imageio.v2 as imageio
+import io
 
 
 # Define the Ackley function
@@ -55,13 +56,19 @@ for i, iteration_points in enumerate(points):
     plt.legend()
 
     # Save frame to buffer
-    frame_path = f"Image/frame_{i}.png"
-    plt.savefig(frame_path)
-    frames.append(imageio.imread(frame_path))
+    buffer = io.BytesIO()
+    plt.savefig(buffer, format='png')  # Save the figure to buffer
+    buffer.seek(0)
+    # frame_path = f"Image/frame_{i}.png"
+    # plt.savefig(frame_path)
+    frames.append(imageio.imread(buffer))
+    buffer.close()
     plt.close()
 
 # Save the frames as a GIF
 gif_path = "Image/GWO_Ackley.gif"
 imageio.mimsave(gif_path, frames,fps=8, loop=0)
+
+
 
 print(f"GIF saved as {gif_path}")

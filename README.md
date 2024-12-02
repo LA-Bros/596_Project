@@ -17,7 +17,7 @@ Our project focuses on selecting a benchmark function and visualizing the optimi
    - Ackley function is often used to evaluate optimization algorithms like Particle Swarm Optimization (PSO), Genetic Algorithm (GA), Differential Evolution (DE), and more.
 
 #### Visualization
-The Ackley function in three dimensions is typically visualized as a smooth surface with a central deep valley at \((0, 0)\), representing the global minimum.
+The Ackley function in three dimensions is typically visualized as a smooth surface with a central deep valley at $\((0, 0, 0)\)$, representing the global minimum.
 
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Ackley.jpg?raw=true)
 

@@ -101,16 +101,16 @@ Show position of points in each iteration
 # Usage
 Compile and run these scripts on the machine supporting OpenMP
 ```
-gcc -o pso_ackley pso_ackley.c -fopenmp -lm
+gcc -o pso_ackley Function/PSO/pso_ackley.c -fopenmp -lm
 ./pso_ackley
 
-gcc -o ga_ackley ga_ackley.c -fopenmp -lm
+gcc -o ga_ackley Function/GA/ga_ackley.c -fopenmp -lm
 ./ga_ackley
 
-gcc -o de_ackley de_ackley.c -fopenmp -lm
+gcc -o de_ackley Function/DE/de_ackley.c -fopenmp -lm
 ./de_ackley
 
-gcc -o gwo_ackley gwo_ackley.c -fopenmp -lm
+gcc -o gwo_ackley Function/GWO/gwo_ackley.c -fopenmp -lm
 ./gwo_ackley
 ```
 Run the `plot_ackley.py` script to visualize the optimization process.

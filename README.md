@@ -1,7 +1,7 @@
 # Benchmark Function
 Ackley function\
 
-$$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$\
+$$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$
 
 
 
@@ -11,10 +11,14 @@ $$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i
 
 
 # Algorithms
-Genetic Algorithm (GA)\
-Grey Wolf Optimization (GWO)\
-Differential Evolution (DE)\
-Particle Swarm Optimization (PSO)
+### Genetic Algorithm (GA)
+Genetic Algorithm (GA) is inspired by the process of natural selection, mimicking biological evolution. It involves populations of candidate solutions that evolve through selection, crossover, and mutation to find optimal solutions.
+### Grey Wolf Optimization (GWO)
+Grey Wolf Optimization (GWO) is a nature-inspired algorithm based on the social hierarchy and hunting behavior of grey wolves. The wolves form a pack led by the alpha, beta, and delta wolves, with the remaining wolves acting as followers (omega).
+### Differential Evolution (DE)
+Differential Evolution (DE) is a population-based optimization algorithm that relies on the differences between randomly selected individuals to generate new candidate solutions.
+### Particle Swarm Optimization (PSO)
+Particle Swarm Optimization (PSO) is inspired by the social behavior of birds flocking or fish schooling. Each particle represents a potential solution and moves through the search space based on its own experience and the experience of its neighbors.
 
 # OpenMP
 ## 1. Genetic Algorithm (GA)

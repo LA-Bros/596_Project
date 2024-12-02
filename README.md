@@ -1,5 +1,5 @@
 # Project Description
-Our project focuses on selecting a benchmark function and visualizing the optimization process of four algorithms on this function. Additionally, we aim to leverage OpenMP to parallelize the computation and enhance the iteration efficiency of these algorithms. After careful consideration, we chose the Ackley function as the benchmark function, and the four optimization algorithms are Genetic Algorithm (GA), Grey Wolf Optimizer (GWO), Differential Evolution (DE), and Particle Swarm Optimization (PSO).
+Our project focuses on selecting a benchmark function and visualizing the optimization process of four algorithms on this function. Additionally, we aim to leverage OpenMP to parallelize the computation and enhance the iteration efficiency of these algorithms. After careful consideration, we chose the Ackley function as the benchmark function, and the four optimization algorithms are Genetic Algorithm (GA)![](https://en.wikipedia.org/wiki/Genetic_algorithm), Grey Wolf Optimizer (GWO), Differential Evolution (DE), and Particle Swarm Optimization (PSO).
 
 
 

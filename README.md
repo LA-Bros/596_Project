@@ -48,13 +48,24 @@ Particle Swarm Optimization (PSO)
 - Each particle updates its position and velocity independently. Use #pragma omp parallel for to parallelize these updates.
 Parallel computing iterative process
 
+## Example
 ```python
-  for (iter = 0; iter < MAX_ITER; iter++) {
-        // Leverage OpenMP to parallel computing iterative process
-        #pragma omp parallel for
-        for (i = 0; i < POP_SIZE; i++) {
-            fitness[i] = rastrigin_function(population[i], DIM);
-        }
+#pragma omp parallel for
+for (int i = 0; i < POPULATION_SIZE; i += 2) {
+    // Select parents
+    int p1 = tournament_selection(fitness);
+    int p2 = tournament_selection(fitness);
+
+    // Crossover and mutation
+    double child1[DIMENSIONS], child2[DIMENSIONS];
+    crossover(population[p1], population[p2], child1, child2);
+    mutate(child1);
+    mutate(child2);
+
+    // Evaluate fitness
+    new_fitness[i] = ackley(child1);
+    new_fitness[i + 1] = ackley(child2);
+}
 ```
 # Visualization
 Show position of points in each iteration\

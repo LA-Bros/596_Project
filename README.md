@@ -8,7 +8,7 @@ Our project focuses on selecting a benchmark function and visualizing the optimi
 ### $$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$
 #### Properties
 1. **Global Minimum**:
-   - The global minimum value is \(f(\mathbf{x}) = 0\), located at \(\mathbf{x} = (0, 0, \ldots, 0)\).
+   - The global minimum value is $\(f(\mathbf{x}) = 0\)$, located at $\(\mathbf{x} = (0, 0, \ldots, 0)\)$.
 
 2. **Multi-Modality**:
    - The function has numerous local minima, making it difficult for optimization algorithms to find the global minimum.

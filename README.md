@@ -78,7 +78,14 @@ Show position of points in each iteration
   <img id="gif3" src="https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true" width="300">
   <img id="gif4" src="https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true" width="300">
 </p>
-
+<script>
+  function restartGIFs() {
+    document.querySelectorAll('img').forEach(img => {
+      img.src = img.src.split('?')[0] + '?t=' + new Date().getTime();
+    });
+  }
+  window.onload = restartGIFs;
+</script>
 
 
 

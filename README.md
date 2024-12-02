@@ -42,7 +42,6 @@ Particle Swarm Optimization (PSO) is inspired by the social behavior of birds fl
 - Evaluate the fitness of all particles in parallel using #pragma omp parallel for.
 2. Position and Velocity Updates:
 - Each particle updates its position and velocity independently. Use #pragma omp parallel for to parallelize these updates.
-Parallel computing iterative process
 
 ## 2. Genetic Algorithm (GA)
 ### Parallelization Points:

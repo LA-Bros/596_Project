@@ -99,19 +99,6 @@ Show position of points in each iteration
 
 
 
-PSO\
-![](https://github.com/LA-Bros/596_Project/blob/main/Image/PSO_Ackley.gif?raw=true)
-
-GA\
-![](https://github.com/LA-Bros/596_Project/blob/main/Image/GA_Ackley.gif?raw=true)
-
-DE\
-![](https://github.com/LA-Bros/596_Project/blob/main/Image/DE_Ackley.gif?raw=true)
-
-GWO\
-![](https://github.com/LA-Bros/596_Project/blob/main/Image/GWO_Ackley.gif?raw=true)
-
-
 
 
 

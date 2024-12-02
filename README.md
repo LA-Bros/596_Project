@@ -99,14 +99,17 @@ Show position of points in each iteration
 
 
 # Usage
-Compile and run these scripts on the machine supporting openmp
+Compile and run these scripts on the machine supporting OpenMP
 ```
 gcc -o pso_ackley pso_ackley.c -fopenmp -lm
 ./pso_ackley
+
 gcc -o ga_ackley ga_ackley.c -fopenmp -lm
 ./ga_ackley
+
 gcc -o de_ackley de_ackley.c -fopenmp -lm
 ./de_ackley
+
 gcc -o gwo_ackley gwo_ackley.c -fopenmp -lm
 ./gwo_ackley
 ```

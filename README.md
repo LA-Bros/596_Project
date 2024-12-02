@@ -35,7 +35,16 @@ Differential Evolution (DE) is a population-based optimization algorithm that re
 Particle Swarm Optimization (PSO) is inspired by the social behavior of birds flocking or fish schooling. Each particle represents a potential solution and moves through the search space based on its own experience and the experience of its neighbors.
 
 # OpenMP
-## 1. Genetic Algorithm (GA)
+## 1. Particle Swarm Optimization (PSO)
+### Parallelization Points:
+
+1. Fitness Evaluation:
+- Evaluate the fitness of all particles in parallel using #pragma omp parallel for.
+2. Position and Velocity Updates:
+- Each particle updates its position and velocity independently. Use #pragma omp parallel for to parallelize these updates.
+Parallel computing iterative process
+
+## 2. Genetic Algorithm (GA)
 ### Parallelization Points:
 
 1. Fitness Evaluation:
@@ -44,14 +53,6 @@ Particle Swarm Optimization (PSO) is inspired by the social behavior of birds fl
 - Each pair of parents produces offspring independently. Use #pragma omp parallel for to perform crossover and mutation in parallel for different pairs of parents.
 3. Selection:
 - Tournament selection or other selection mechanisms can be parallelized for each individual since selections do not depend on other individuals.
-
-## 2. Grey Wolf Optimization (GWO)
-### Parallelization Points:
-
-1. Fitness Evaluation:
-- Evaluating the fitness of each wolf in the population can be parallelized using #pragma omp parallel for.
-2. Position Updates:
-- In GWO, the positions of wolves are updated based on the alpha, beta, and delta wolves' positions. Each wolf's position update is independent and can be parallelized.
 
 
 ## 3. Differential Evolution (DE)
@@ -64,14 +65,15 @@ Particle Swarm Optimization (PSO) is inspired by the social behavior of birds fl
 
 - Evaluate the fitness of trial vectors in parallel since fitness computation is independent for each vector.
 
-## 4. Particle Swarm Optimization (PSO)
+## 4. Grey Wolf Optimization (GWO)
 ### Parallelization Points:
 
 1. Fitness Evaluation:
-- Evaluate the fitness of all particles in parallel using #pragma omp parallel for.
-2. Position and Velocity Updates:
-- Each particle updates its position and velocity independently. Use #pragma omp parallel for to parallelize these updates.
-Parallel computing iterative process
+- Evaluating the fitness of each wolf in the population can be parallelized using #pragma omp parallel for.
+2. Position Updates:
+- In GWO, the positions of wolves are updated based on the alpha, beta, and delta wolves' positions. Each wolf's position update is independent and can be parallelized.
+
+
 
 ## Example
 ```python

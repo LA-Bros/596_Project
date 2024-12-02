@@ -113,7 +113,7 @@ gcc -o de_ackley Function/DE/de_ackley.c -fopenmp -lm
 gcc -o gwo_ackley Function/GWO/gwo_ackley.c -fopenmp -lm
 ./gwo_ackley
 ```
-Run the `plot_ackley.py` script to visualize the optimization process.
+Run the `plot_ackley.py` script to visualize the optimization process based on the output `Function/PSO/pso_ackley.txt`, `Function/GA/ga_ackley.txt`, `Function/DE/de_ackley.txt`, `Function/GWO/gwo_ackley.txt`.
 
 ```bash
 python plot_ackley.py

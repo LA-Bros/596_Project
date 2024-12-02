@@ -6,8 +6,18 @@ Our project focuses on selecting a benchmark function and visualizing the optimi
 # Benchmark Function
 ## Ackley function
 ### $$f(\mathbf{x}) = -a \cdot \exp\left(-b \cdot \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^n \cos(c \cdot x_i)\right) + a + \exp(1)$$
+#### Properties
+1. **Global Minimum**:
+   - The global minimum value is \(f(\mathbf{x}) = 0\), located at \(\mathbf{x} = (0, 0, \ldots, 0)\).
 
+2. **Multi-Modality**:
+   - The function has numerous local minima, making it difficult for optimization algorithms to find the global minimum.
 
+3. **Use in Benchmarking**:
+   - Ackley function is often used to evaluate optimization algorithms like Particle Swarm Optimization (PSO), Genetic Algorithm (GA), Differential Evolution (DE), and more.
+
+#### Visualization
+The Ackley function in two dimensions is typically visualized as a smooth surface with a central deep valley at \((0, 0)\), representing the global minimum.
 
 ![](https://github.com/LA-Bros/596_Project/blob/main/Image/Ackley.jpg?raw=true)
 

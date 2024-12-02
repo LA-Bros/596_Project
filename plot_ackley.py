@@ -76,7 +76,7 @@ for j in range(0, 4):
     gif_path = f"Image/{algonames[j]}_Ackley.gif"
     imageio.mimsave(gif_path, frames, fps=6, loop=0)
 
-    print(f"GIF saved as {gif_path}")
+    print(f"{algonames[j]} GIF saved as {gif_path}")
 
 
 gifnames = ["Image/PSO_Ackley.gif", "Image/GA_Ackley.gif", "Image/DE_Ackley.gif", "Image/GWO_Ackley.gif"]
